@@ -1,4 +1,5 @@
 # knockoutjs-tutorial
 Knockoutjs Tutorial
-## Tutorial
-1. [Step 1 of 5](1-tutorial/step-1")
+
+## Introduction
+1. [Step 1 of 5](1-introduction/step-1)
