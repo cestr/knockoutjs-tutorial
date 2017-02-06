@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Step 3 of 5 | Working with Lists and Collections | Knockout Tutorial</title>
+</head>
+
+<body>
+    <a href="../../">HOME</a>
+    <h1>Step 3 of 5</h1>
+    <section>
+        <h2>Your seat reservations</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Passenger name</th>
+                    <th>Meal</th>
+                    <th>Surcharge</th>
+                </tr>
+            </thead>
+            <tbody data-bind="foreach: seats">
+                <tr>
+                    <td data-bind="text: name"></td>
+                    <td><select data-bind="options: $root.availableMeals, value: $index(), optionsText: 'mealName'"></select></td>
+                    <td data-bind="text: meal().price"></td>
+                </tr>
+            </tbody>
+
+        </table>
+        <button data-bind="click: addSeat">Reserve another seat</button>
+    </section>
+    <section>
+        <a href="../step-2/index.html">&lt; Step 2 of 5</a> | <a href="../step-4/index.html">Step 4 of 5 &gt;</a>
+    </section>
+    <footer>
+        <script src="knockout-3.4.1.js"></script>
+        <script src="index.js"></script>
+    </footer>
+</body>
+
+</html>
