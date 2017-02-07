@@ -3,12 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Step 3 of 5 | Working with Lists and Collections | Knockout Tutorial</title>
+    <title>Step 4 of 5 | Working with Lists and Collections | Knockout Tutorial</title>
 </head>
 
 <body>
     <a href="../../">HOME</a>
-    <h1>Step 3 of 5</h1>
+    <h1>Step 4 of 5</h1>
     <section>
         <h2>Your seat reservations</h2>
         <table>
@@ -24,14 +24,18 @@
                     <td data-bind="text: name"></td>
                     <td><select data-bind="options: $root.availableMeals, value: $index(), optionsText: 'mealName'"></select></td>
                     <td data-bind="text: formatterPrice"></td>
+                    <td><a href="#" data-bind="click: $root.removeSeat">Remove</a></td>
                 </tr>
             </tbody>
 
         </table>
         <button data-bind="click: addSeat">Reserve another seat</button>
+        <h3 data-bind="visible: totalSurcharge() > 0">
+            Total surcharge: $<span data-bind="text: totalSurcharge().toFixed(2)"></span>
+        </h3>
     </section>
     <section>
-        <a href="../step-2/index.html">&lt; Step 2 of 5</a> | <a href="../step-4/index.html">Step 4 of 5 &gt;</a>
+        <a href="../step-3/index.html">&lt; Step 3 of 5</a> | <a href="../step-5/index.html">Step 5 of 5 &gt;</a>
     </section>
     <footer>
         <script src="knockout-3.4.1.js"></script>
