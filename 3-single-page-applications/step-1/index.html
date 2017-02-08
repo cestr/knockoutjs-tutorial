@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Step 1 of 5 | Single page applications | Knockout Tutorial</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <a href="../../">HOME</a>
+    <h1>Step 1 of 5</h1>
+    <section>
+        <!-- Folders -->
+        <ul class="folders" data-bind="foreach: folders">
+            <li data-bind="text: $data, 
+            css: {selected: $data == $root.chosenFolderId()},
+            click: $root.goToFolder"></li>
+        </ul>
+    </section>
+    <section>
+        <a href="../step-2/index.html">Step 2 of 5 &gt;</a>
+    </section>
+    <footer>
+        <script src="knockout-3.4.1.js"></script>
+        <script src="index.js"></script>
+    </footer>
+</body>
+
+</html>

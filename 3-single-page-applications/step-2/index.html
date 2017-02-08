@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Step 2 of 5 | Single page applications | Knockout Tutorial</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <a href="../../">HOME</a>
+    <h1>Step 2 of 5</h1>
+    <section>
+        <!-- Folders -->
+        <ul class="folders" data-bind="foreach: folders">
+            <li data-bind="text: $data, 
+            css: {selected: $data == $root.chosenFolderId()},
+            click: $root.goToFolder"></li>
+        </ul>
+        <!-- Mails grid -->
+        <table class="mails" data-bind="with: chosenFolderData">
+            <thead>
+                <tr>
+                    <th>From</th>
+                    <th>To</th>
+                    <th>Subject</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody data-bind="foreach: mails">
+                <tr>
+                    <td data-bind="text: from"></td>
+                    <td data-bind="text: to"></td>
+                    <td data-bind="text: subject"></td>
+                    <td data-bind="text: date"></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <section>
+        <a href="../step-2/index.html">Step 2 of 5 &gt;</a>
+    </section>
+    <footer>
+        <script src="jquery.min.js"></script>
+        <script src="knockout-3.4.1.js"></script>
+        <script src="index.js"></script>
+    </footer>
+</body>
+
+</html>
