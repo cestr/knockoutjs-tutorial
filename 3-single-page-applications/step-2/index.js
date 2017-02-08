@@ -11,7 +11,7 @@ function WebmailViewModel() {
     // Behaviours
     self.goToFolder = function(folder) {
         self.chosenFolderId(folder);
-        $.get('/mail',{ folder: folder}, self.chosenFolderData);
+        $.get('//learn.knockoutjs.com/mail',{ folder: folder}, self.chosenFolderData);
     }
 
     // Show inbox by default
